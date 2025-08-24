@@ -1,0 +1,82 @@
+.about-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+}
+.about-container {
+  width: 95%;
+}
+.about-heading-main {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+}
+.about-heading-container {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+.about-big-heading {
+  width: 60%;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+.about-small-heading {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: grey;
+}
+
+.about-link-btn-container {
+  display: flex;
+  justify-content: center;
+}
+.about-link-btn {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  height: 200px;
+  align-items: flex-end;
+}
+.about-link-btn > div {
+  
+  color: white;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+.about-btn-text {
+  background-color: red;
+  display: block;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-btn-background{
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  background-color: aqua;
+  position: absolute;
+  display: block;
+  width: 120%;
+  height: 150%;
+  border-radius: 50%;
+}

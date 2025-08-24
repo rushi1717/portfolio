@@ -1,0 +1,16 @@
+.scroll-main {
+  /* height: 300px; */
+  color: white;
+  background: black;
+  overflow: hidden;
+  font-family: "Anton";
+}
+
+.scroll-text {
+  font-size: 15rem;
+  font-weight: bold;
+  line-height: 1;
+  white-space: nowrap;
+  margin: 0;
+  padding-left: 4rem;
+}

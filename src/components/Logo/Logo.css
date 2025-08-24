@@ -1,0 +1,15 @@
+.logo-ha {
+  /* display: inline-block; */
+  /* overflow: hidden; */
+  cursor: pointer;
+}
+
+.logo-inner {
+  display: flex;
+  border: solid red;
+}
+
+.logo-inner span {
+  display: inline-block;
+  min-width: max-content;
+}

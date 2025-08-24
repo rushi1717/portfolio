@@ -1,0 +1,207 @@
+/* ScrollSVGTimeline.css */
+
+.timeline-wrapper {
+  background: white;
+}
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-svg {
+  overflow: visible;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Milestone animations */
+@keyframes milestoneAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  70% {
+    /* transform: scale(1.2); */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes textSlideIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.milestone-circle {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.milestone-circle.visible {
+  animation: milestoneAppear ease-out forwards;
+}
+
+.milestone-text {
+  opacity: 0;
+  transform: scale(0.8) translateY(10px);
+  transition: all 0.4s ease-out;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.milestone-text.visible {
+  animation: textSlideIn 0.5s ease-out 0.1s forwards;
+}
+
+.milestone-foreignobject {
+  pointer-events: none;
+}
+
+/* Content sections */
+.content-sections {
+  position: absolute;
+  left: 60%;
+  top: 0;
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 50px 0;
+}
+
+.content-card {
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 50px;
+  transition: all 0.6s ease-out;
+}
+
+.content-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content-card.hidden {
+  opacity: 0.3;
+  transform: translateY(20px);
+}
+
+.content-card h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.content-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.progress-label {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 500;
+}
+
+/* Progress indicator */
+.progress-indicator {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Bottom spacing */
+.bottom-spacing {
+  height: 50vh;
+}
+
+/* Decorative dots */
+.decorative-dots {
+  opacity: 0.1;
+}
+
+.decorative-dot {
+  /* fill: #764ba2; */
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .content-sections {
+    left: 55%;
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .content-sections {
+    position: relative;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    margin-top: 30px;
+  }
+  
+  .content-card {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  .timeline-svg {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .progress-indicator {
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-card {
+    padding: 15px;
+  }
+  
+  .content-card h3 {
+    font-size: 1rem;
+  }
+  
+  .content-card p {
+    font-size: 0.9rem;
+  }
+  
+  .milestone-text {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}

@@ -1,0 +1,78 @@
+.hero-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 90px);
+}
+
+.hero-container {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This pushes first element up, last element down */
+  height: 100%; /* Make container take full hero-main height */
+}
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+}
+.hero-location-main {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+}
+.hero-location-heading {
+  display: flex;
+  justify-content: flex-end;
+  color: rgb(33, 33, 33);
+}
+.hero-location {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 15px;
+}
+.hero-location-arrow {
+  position: absolute;
+  top: 50%;
+  left: -50%;
+}
+.hero-location-arrow > svg {
+  height: 20px;
+  width: 20px;
+}
+.hero-heading-main {
+  padding: 2rem 0;
+  width: 50%;
+  color: red;
+}
+
+.hero-heading-container {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 3rem;
+  height: 85px;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-footer {
+  display: flex;
+  align-items: flex-end;
+  padding: 3rem;
+}
+
+.hero-footer-scroll {
+  flex: 2;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.hero-footer-text {
+  flex: 1;
+}
+.hero-footer-text-item {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
